@@ -6,6 +6,7 @@ import java.io.IOException;
 
 public abstract class FileUtils {
 
+
     public static void createFile(String dst, String message){
         FileOutputStream dstFile=null;
         try {
@@ -62,7 +63,7 @@ public abstract class FileUtils {
 
 
             if(srcCompare.available()!=srcTo.available()){//not same size
-                System.out.println("Files are not equal");
+               // System.out.println("Files are not equal");
                 return false;
             }
 
@@ -70,11 +71,11 @@ public abstract class FileUtils {
                // System.out.println(Character.toChars(inputByteCompare));
                // System.out.println(Character.toChars(inputByteTo));
                 if(inputByteCompare!=srcTo.read()){
-                    System.out.println("Files are not equal");
+                   // System.out.println("Files are not equal");
                     return false;
                 }
             }
-            System.out.println("Files are equal");
+           // System.out.println("Files are equal");
             return true;
 
         }catch (IOException e){
